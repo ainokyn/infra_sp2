@@ -83,10 +83,15 @@ Windows должен происходить внутри виртуальной 
 >sudo apt update 
 6. Установить пакеты для работы через протокол https:
 >sudo apt install \\
+
   >>apt-transport-https \\
+  
   >>ca-certificates \\
+  
   >>curl \\
+  
   >>gnupg-agent \
+  
   >>software-properties-common -y
 7. Добавить ключ GPG для подтверждения подлинности в процессе установки:
 >curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
