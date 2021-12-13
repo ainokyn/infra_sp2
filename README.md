@@ -78,7 +78,8 @@
 >sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
 9. Обновление индексов процессов:
 >sudo apt update 
-**Запуск проекта**
+##Запуск проекта
+
 1. Заполнить .env файл для своего проекта в соотвтетствии с шаблоном
 ***
 DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
