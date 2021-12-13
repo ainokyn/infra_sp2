@@ -66,7 +66,7 @@
 5. Обновить список для менеджера пакетов ATP:
 >sudo apt update 
 6. Установить пакеты для работы через протокол https:
->sudo apt install «\»
+>sudo apt install \\
   apt-transport-https «\»
   ca-certificates «\»
   curl «\»
