@@ -80,6 +80,7 @@
 >sudo apt update 
 **Запуск проекта**
 1. Заполнить .env файл для своего проекта в соотвтетствии с шаблоном
+***
 DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
 DB_NAME=postgres # имя базы данных
 POSTGRES_USER=postgres # логин для подключения к базе данных
