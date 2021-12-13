@@ -61,22 +61,22 @@
 >curl -fsSL https://get.docker.com -o get-docker.sh
 3. Эта команда запустит его
 >sh get-docker.sh  
-В терминале надо удалить старые версии командой:
+4. В терминале надо удалить старые версии командой:
 >sudo apt remove docker docker-engine docker.io containerd runc
-Обновить список для менеджера пакетов ATP:
+5. Обновить список для менеджера пакетов ATP:
 >sudo apt update 
-Установить пакеты для работы через протокол https:
+6. Установить пакеты для работы через протокол https:
 >sudo apt install \
   apt-transport-https \
   ca-certificates \
   curl \
   gnupg-agent \
   software-properties-common -y
-Добавить ключ GPG для подтверждения подлинности в процессе установки:
+7. Добавить ключ GPG для подтверждения подлинности в процессе установки:
 >curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-Добавить репозиторий Docker в пакеты apt:
+8. Добавить репозиторий Docker в пакеты apt:
 >sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
-Обновление индексов процессов:
+9. Обновление индексов процессов:
 >sudo apt update 
 **Запуск проекта**
 1. Заполнить .env файл для своего проекта в соотвтетствии с шаблоном
