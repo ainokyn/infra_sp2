@@ -1,0 +1,6 @@
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=test_bd
+POSTGRES_USER=api_yutube_user
+POSTGRES_PASSWORD=123qwe!E
+DB_HOST=db 
+DB_PORT=5432 
