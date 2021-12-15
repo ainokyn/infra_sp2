@@ -1,14 +1,13 @@
 import os
 from datetime import timedelta
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
 
 DEBUG = False
 
-ALLOWED_HOSTS = [ '127.0.0.1', 'localhost', '*', ]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*', ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -83,8 +82,8 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
-#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
@@ -124,5 +123,3 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', default='5432'),
     }
 }
-
-
