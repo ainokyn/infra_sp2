@@ -72,35 +72,56 @@ Windows должен происходить внутри виртуальной 
 **Установка Docker на Linux**
 
 1. Установка утилиты для скачивания файлов
->sudo apt install curl
-2. Эта команда скачает скрипт для установки докера
 ```
->curl -fsSL https://get.docker.com -o get-docker.sh
+sudo apt install curl
+
+```
+3. Эта команда скачает скрипт для установки докера
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
 
 ```
 4. Эта команда запустит его
->sh get-docker.sh  
-5. В терминале надо удалить старые версии командой:
->sudo apt remove docker docker-engine docker.io containerd runc
-6. Обновить список для менеджера пакетов ATP:
->sudo apt update 
-7. Установить пакеты для работы через протокол https:
->sudo apt install \\
+```
+sh get-docker.sh
 
-  >>apt-transport-https \\
+```
+6. В терминале надо удалить старые версии командой:
+```
+sudo apt remove docker docker-engine docker.io containerd runc
+
+```
+8. Обновить список для менеджера пакетов ATP:
+```
+sudo apt update 
+
+```
+10. Установить пакеты для работы через протокол https:
+```
+sudo apt install \\
+
+  apt-transport-https \\
   
-  >>ca-certificates \\
+  ca-certificates \\
   
-  >>curl \\
+  curl \\
   
-  >>gnupg-agent \
+  gnupg-agent \
   
-  >>software-properties-common -y
+  software-properties-common -y
+  
+  ```
 7. Добавить ключ GPG для подтверждения подлинности в процессе установки:
->curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-8. Добавить репозиторий Docker в пакеты apt:
->sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
-9. Обновление индексов процессов:
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+```
+9. Добавить репозиторий Docker в пакеты apt:
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
+
+```
+10. Обновление индексов процессов:
 >sudo apt update 
 
 ## Запуск проекта
@@ -120,14 +141,32 @@ DB_HOST=db # название сервиса (контейнера)
 DB_PORT=5432 # порт для подключения к БД 
 
 2. Запускаем контейнеры
->docker-compose up -d --build
-3. Выполняем миграции
->docker-compose exec web python manage.py migrate
-4. Создаем суперюзера
->docker-compose exec web python manage.py createsuperuser
-5. Собираем статику
->docker-compose exec web python manage.py collectstatic --no-input
-6. Заполняем базу данных тестовыми данными
->docker-compose exec web python manage.py loaddata fixtures.json
-7. При необходимости останавливаем котейнеры
->docker-compose down -v 
+```
+docker-compose up -d --build
+
+```
+4. Выполняем миграции
+```
+docker-compose exec web python manage.py migrate
+
+```
+6. Создаем суперюзера
+```
+docker-compose exec web python manage.py createsuperuser
+
+```
+8. Собираем статику
+```
+docker-compose exec web python manage.py collectstatic --no-input
+
+```
+10. Заполняем базу данных тестовыми данными
+```
+docker-compose exec web python manage.py loaddata fixtures.json
+
+```
+12. При необходимости останавливаем котейнеры
+```
+docker-compose down -v 
+
+```
