@@ -93,16 +93,11 @@ sudo apt update
 ```
 10. Установить пакеты для работы через протокол https:
 ```
-sudo apt install \\
-
-  apt-transport-https \\
-  
-  ca-certificates \\
-  
-  curl \\
-  
+sudo apt install \
+  apt-transport-https \
+  ca-certificates \
+  curl \
   gnupg-agent \
-  
   software-properties-common -y
   ```
 7. Добавить ключ GPG для подтверждения подлинности в процессе установки:
